@@ -1,6 +1,6 @@
 FROM python:3.8-slim-buster
 MAINTAINER WangXin <Xin.Wang@harman.com>
-COPY sqlplus/*.rpm /home/sqlplus/
+COPY *.rpm /home/sqlplus/
 RUN apt-get update \
     && apt-get install alien -y \
     && alien -i /home/sqlplus/oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm \
